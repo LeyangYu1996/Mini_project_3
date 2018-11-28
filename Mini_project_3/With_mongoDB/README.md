@@ -10,7 +10,7 @@ Firstly, please check [this website](https://docs.mongodb.com/manual/administrat
 
 2.1 Setting up main.py
 
-Modify the program by inputting your key to the twitter API into the 20th row of main.py, and the direction of your fonts into the 31th row of the program.
+Modify the program by inputting your key to the twitter API into the 20th row of main.py, and the direction of your fonts into the 31st row of the program.
 
 2.2 Getting all the libraries
 
