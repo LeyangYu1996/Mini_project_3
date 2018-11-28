@@ -20,7 +20,7 @@ In the terminal, download all the libraries imported in the program. You can dow
 
 In the terminal, set up authentication for Google Cloud by using argue
 ```
-export GOOGLE_APPLICATION_CREDITS="./YOUR CREDIT FILE"
+export GOOGLE_APPLICATION_CREDENTIALS="./YOUR_FILE.json"
 ```
 
 2.4 Running main.py
