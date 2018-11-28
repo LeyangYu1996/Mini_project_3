@@ -23,10 +23,10 @@ import pymongo
 #Ref:http://api.mongodb.com/python/current/installation.html
 
 # Setting up twitter key.
-consumer_key = 
-consumer_secret = 
-access_key = 
-access_secret = 
+consumer_key = YOUR_KEY
+consumer_secret = YOUR_KEY
+access_key = YOUR_KEY
+access_secret = YOUR_KEY
 
 # Connect to mongo server.
 client = pymongo.MongoClient('mongodb://localhost:27017/')
