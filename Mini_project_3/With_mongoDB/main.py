@@ -31,7 +31,7 @@ access_secret = YOUR_KEY
 # Connect to mongo server.
 client = pymongo.MongoClient('mongodb://localhost:27017/')
 db = client.Pics
-User_name = "Leyang Yu"
+User_name = User_name
 
 # Input the direction of your fonts here
 fonts = './FONTs.ttf'
