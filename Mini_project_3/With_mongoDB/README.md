@@ -51,7 +51,7 @@ This program can store the urls to the pictures and the description into a mongo
 {'_id': ObjectId('Id_Number'),
  'author': 'Your_name',
  'link': 'PIC_URL',
- 'tags': ['TAGS']}
+ 'tags': ['A_LIST_OF_TAGS']}
 
 ```
 
