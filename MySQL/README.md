@@ -55,6 +55,7 @@ The outputs of this program is a video that contains a brief description of the 
 4.2 Databases
 
 This program can store the urls to the pictures and the description into a MySQL database. The database is called Pics and it contains 3 different tables: 
+
 | table     | contents |
 | --- | --- |
 | pics_info      | Pic_No, Screen_name(Twitter_account), pic_url      |
