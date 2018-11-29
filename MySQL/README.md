@@ -58,7 +58,7 @@ This program can store the urls to the pictures and the description into a MySQL
 
 | table     | contents |
 | --- | --- |
-| pics_info      | Pic_No, Screen_name(Twitter_account), pic_url      |
-| tags | tags_no, tags         |
-| pic_tags     |  Pic_No and corresponding tags         |
+| `pics_info`      | `Pic_No`, `Screen_name`(Twitter_account), `pic_url`      |
+| `tags` | `tags_no`, `tags`         |
+| `pic_tags`     |  `Pic_No` and corresponding `tags`         |
 
