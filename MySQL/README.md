@@ -1,11 +1,11 @@
 
 # EC601_Mini_Project3
 
-## 1.Installing and starting MongoDB server
+## 1.Installing and starting MySQL server
 
-1.1 Install MongoDB server.
+1.1 Install MySQL server.
 
-Firstly, please check [this website](https://docs.mongodb.com/manual/administration/install-community/) and download the proper version according to your OS. After that, please start mongoDB service on your local computer.
+Firstly, please check [this website](https://dev.mysql.com/downloads/) and download the proper version according to your OS. After that, MySQL database server will automatically run on your local host.
 
 ## 2.Running main.py
 
