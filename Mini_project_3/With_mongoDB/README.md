@@ -31,12 +31,17 @@ In the same terminal as the step 2.3, run 'python3 main.py'. During the running 
 
 3.1 Main function
 
-This program is designed to help user search for a specific Tag, and print the url of the pictures that contains this tag.
+This program is designed to help user search for a specific Tag and print the url of the pictures that contains this tag, or to print the statistic data out.
 
 3.2 How to run it
 
-You can simply run this file using `python3 search.py`, and input the Tags you want as the program requires. It will print out the urls of the pictures that contains the tag you input.
+3.2.1 Search for a tag
 
+You can simply run this file using `python3 search.py`, input `T` when asked whether you want to search or check the statistics. Then you can input the Tags you want as the program requires. It will print out the urls of the pictures that contains the tag you input.
+
+3.2.2 Check for the statistics.
+
+You can simply run this file using `python3 search.py`, input `S` when asked whether you want to search or check the statistics.
 
 ## 4.Results of running
 
