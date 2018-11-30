@@ -33,7 +33,7 @@ export GOOGLE_APPLICATION_CREDENTIALS="./YOUR_FILE.json"
 
 4.1 Running main.py
 
-In the same terminal as the step 3.2, run 'python3 main.py'. During the running of the program, you should input the Twitter account that you like to download pictures from and the number of tweets you want to go through.
+In the same terminal as the step 3.2, run `python3 main.py`. During the running of the program, you should input the Twitter account that you like to download pictures from and the number of tweets you want to go through.
 
 ## 5.Running search.py
 
