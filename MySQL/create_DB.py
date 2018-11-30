@@ -1,10 +1,24 @@
+'''
+ Copyright 2018 Leyang Yu yly@bu.edu
+
+ This uses python 3.* and DO NOT support python 2.*
+ This project requires tweepy, urllib, google.cloud, PILLOW and ffmpeg libraries.
+ This project uses MySQL database to store picture information. 
+ Setting up authentication for Google Cloud is REQUIRED before running this program.
+'''
 import mysql.connector
 from mysql.connector import errorcode
 
+# Please input your database user_name and password here.
+DB_USER = 'user'
+DB_PASSWORD = 'password'
+
+# Choose Pics as working database.
 DB_NAME = 'Pics'
 
 TABLES = {}
 
+# Define the contents in each table.
 TABLES['pics_info'] = (
     "CREATE TABLE `pics_info` ("
     "  `Pic_No` int(10) NOT NULL,"
@@ -31,14 +45,15 @@ TABLES['pic_tags'] = (
     ") ENGINE=InnoDB")
 
 # Connect to the database and create a cursor
-cnx = mysql.connector.connect(user='user', password='password')
+cnx = mysql.connector.connect(user=DB_USER, password=DB_PASSWORD)
 cursor = cnx.cursor()
 
+# Check if user need to clean up an existing database or need to create a new database.
 checker = input("Please input 0 if you need to clean up your existing database, and input 1 if you need to create a new database:")
 if(checker == str(0)):
     cursor.execute("DROP DATABASE "+DB_NAME)
 
-
+# Define the function to create a database
 def create_database(cursor):
     try:
         cursor.execute(
@@ -47,6 +62,7 @@ def create_database(cursor):
         print("Failed creating database: {}".format(err))
         exit(1)
 
+# If the database dont exist, create it.
 try:
     cursor.execute("USE {}".format(DB_NAME))
 except mysql.connector.Error as err:
@@ -59,7 +75,7 @@ except mysql.connector.Error as err:
         print(err)
         exit(1)
 
-
+# Create tables in the database.
 for table_name in TABLES:
     table_description = TABLES[table_name]
     try:

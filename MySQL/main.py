@@ -1,7 +1,10 @@
 '''
+ Copyright 2018 Leyang Yu yly@bu.edu
+
  This uses python 3.* and DO NOT support python 2.*
  This project requires tweepy, urllib, google.cloud, PILLOW and ffmpeg libraries.
- Setting up authentication for Google Cloud is REQUIRED before running this program
+ This project uses MySQL database to store picture information. 
+ Setting up authentication for Google Cloud is REQUIRED before running this program.
 '''
 import tweepy
 #Ref:https://github.com/tweepy/tweepy
@@ -24,6 +27,9 @@ consumer_secret = YOUR_KEY
 access_key = YOUR_KEY
 access_secret = YOUR_KEY
 
+# Please input your database user_name and password here.
+DB_USER = 'user'
+DB_PASSWORD = 'password'
 
 # Input the direction of your fonts here
 fonts = './FONTs.ttf'
@@ -52,7 +58,7 @@ def download_tweets(Name):
         return 0
 
     # Connect to the database and create a cursor
-    cnx = mysql.connector.connect(user='user', password='password',database='Pics')
+    cnx = mysql.connector.connect(user=DB_USER, password=DB_PASSWORD,database='Pics')
     cursor = cnx.cursor()
 
     # Check if there is no tweets downloaded
@@ -131,7 +137,7 @@ def get_labels(Start_Pic_No):
                 return 0
 
             # Connect to the database and create a cursor
-            cnx = mysql.connector.connect(user='user', password='password',database='Pics')
+            cnx = mysql.connector.connect(user=DB_USER, password=DB_PASSWORD,database='Pics')
             cursor = cnx.cursor()
 
             # Setup the cursor 
@@ -186,7 +192,7 @@ def Get_DB_Start():
     # Get the start of the Pic_info table, in order to connect Pics and tags
 
     # Connect to the database and create a cursor
-    cnx = mysql.connector.connect(user='user', password='password',database='Pics')
+    cnx = mysql.connector.connect(user=DB_USER, password=DB_PASSWORD,database='Pics')
     cursor = cnx.cursor()    
 
     cursor.execute("SELECT MAX(Pic_No) FROM pics_info")
